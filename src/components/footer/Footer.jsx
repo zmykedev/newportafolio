@@ -12,9 +12,6 @@ const Footer = () => {
       <a href="#react" className='footer__logo '>PORTAFOLIO REACT <div className='ml-3 mt-2.5'><GrReactjs/></div></a>
       
       <ul className='permalinks'>
-      <li>
-        <a href="#home">Home</a>
-      </li>
       <li>     <a href="#about">Sobre mi </a></li>
       
       <li> <a href="#contact">Contacto</a></li>

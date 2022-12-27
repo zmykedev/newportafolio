@@ -1,12 +1,57 @@
 import React from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/react_hooks.jpg'
+import IMG2 from '../../assets/music.jpg'
 import IMG4 from '../../assets/css.png'
 import IMG5 from '../../assets/python.webp'
 import IMG6 from '../../assets/js.jpg'
 import {useState} from 'react';
 import Wrapper from '../Helpers/Wrapper';
 import CD from '../../assets/code.png'
+
+import Player from "@madzadev/audio-player";
+import "@madzadev/audio-player/dist/index.css";
+
+const colors = `html {
+
+  --tagsText: #ffffff;
+  --tagsBackgroundHoverActive: #2cc0a0;
+  --tagsTextHoverActive: #ffffff;
+  --searchBackground: #18191f;
+  --searchText: #ffffff;
+  --searchPlaceHolder: #575a77;
+  --playerBackground: #18191f;
+  --titleColor: #ffffff; 
+  --timeColor: #ffffff;
+  --progressSlider: #4db5ff;
+  --progressUsed: #3AD13A;
+  --progressLeft: #151616;
+  --volumeSlider: #4db5ff;
+  --volumeUsed: #3AD13A;
+  --volumeLeft:  #151616;
+  --playlistBackground: #18191f;
+  --playlistText: #575a77;
+  --playlistBackgroundHoverActive:  #18191f;
+  --playlistTextHoverActive: #ffffff;
+}`;
+
+const tracks = [
+  {
+    url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
+    title: "Chords of Life",
+    tags: [],
+  },
+  {
+    url: "https://audioplayer.madza.dev/Madza-Late_Night_Drive.mp3",
+    title: "Late Night Drive",
+    tags: [],
+  },
+  {
+    url: "https://audioplayer.madza.dev/Madza-Persistence.mp3",
+    title: "Persistence",
+    tags: [],
+  },
+];
 
 const data = [
   { id: 1,
@@ -16,8 +61,8 @@ const data = [
     demo: ''
 },
 { id: 2,
-  image: IMG1,
-  title: 'React Hooks: useEffect',
+  image: IMG2,
+  title: 'Reproductor de música',
   github: 'http://github.com/zmykedev',
   demo: 'https://dribbble.com/'
 },
@@ -141,21 +186,12 @@ const Portfolio = () => {
         <div className="container portfolio__detail absolute rounded-2xl md:h-max w-75% bg-white p-4 text-black ">
           
               <button  onClick={toggleVisibility2} className='float-right m-auto mr-2 mt-1'  >Cerrar</button>
-            <h1 className='text-center mt-16'>useEffect</h1>
-            <div className="container hooks_cont">
-                    <p className='mt-8' >Un hook es una función que nos permite conectarnos a la herramientas y caracteristicas de React.
-                      El hook mas basico es useState que permite agregar un estado de reacción a los componentes de la función, lo que le agrega dinamismo y fluidez a nuestra aplicación ya que no renderea y su tiempo de carga es rapido.
-                    </p>
-                    <h3 className='mt-6'>El siguiente codigo genera la siguiente funcionalidad:</h3>
-                    <img  className='mt-3' src={CD} alt="code" />
-                    <p className='mt-6 text-center'>Las veces que clickes se veran reflejadas aqui  {count} veces.</p>
-
-                    <div className='flex justify-center'><button className=' mt-3 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'onClick={() => setCount(count + 1)}>
-                      Click aquí
-                    </button></div>
-                    
-            </div>
-          
+            <h1 className='text-center mt-16'>Reproductor de música</h1>
+            <Player trackList={tracks} 
+             includeSearch={true}
+             showPlaylist={true}
+             autoPlayNextTrack={true}
+             customColorScheme={colors}/>
             </div>
                           )
               }
