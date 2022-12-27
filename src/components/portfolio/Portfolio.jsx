@@ -37,17 +37,17 @@ const colors = `html {
 
 const tracks = [
   {
-    url: "",
+    url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
     title: "Chords of Life",
     tags: [],
   },
   {
-    url: "",
+    url: "https://audioplayer.madza.dev/Madza-Late_Night_Drive.mp3",
     title: "Late Night Drive",
     tags: [],
   },
   {
-    url: "",
+    url: "https://audioplayer.madza.dev/Madza-Persistence.mp3",
     title: "Persistence",
     tags: [],
   },
