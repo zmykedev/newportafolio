@@ -9,8 +9,49 @@ import {useState} from 'react';
 import Wrapper from '../Helpers/Wrapper';
 import CD from '../../assets/code.png'
 
+import Player from "@madzadev/audio-player";
+import "@madzadev/audio-player/dist/index.css";
 
+const colors = `html {
 
+  --tagsText: #ffffff;
+  --tagsBackgroundHoverActive: #2cc0a0;
+  --tagsTextHoverActive: #ffffff;
+  --searchBackground: #18191f;
+  --searchText: #ffffff;
+  --searchPlaceHolder: #575a77;
+  --playerBackground: #18191f;
+  --titleColor: #ffffff; 
+  --timeColor: #ffffff;
+  --progressSlider: #4db5ff;
+  --progressUsed: #3AD13A;
+  --progressLeft: #151616;
+  --volumeSlider: #4db5ff;
+  --volumeUsed: #3AD13A;
+  --volumeLeft:  #151616;
+  --playlistBackground: #18191f;
+  --playlistText: #575a77;
+  --playlistBackgroundHoverActive:  #18191f;
+  --playlistTextHoverActive: #ffffff;
+}`;
+
+const tracks = [
+  {
+    url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
+    title: "Chords of Life",
+    tags: [],
+  },
+  {
+    url: "https://audioplayer.madza.dev/Madza-Late_Night_Drive.mp3",
+    title: "Late Night Drive",
+    tags: [],
+  },
+  {
+    url: "https://audioplayer.madza.dev/Madza-Persistence.mp3",
+    title: "Persistence",
+    tags: [],
+  },
+];
 
 const data = [
   { id: 1,
@@ -146,7 +187,11 @@ const Portfolio = () => {
           
               <button  onClick={toggleVisibility2} className='float-right m-auto mr-2 mt-1'  >Cerrar</button>
             <h1 className='text-center mt-16'>Reproductor de música</h1>
-            
+            <Player trackList={tracks} 
+             includeSearch={true}
+             showPlaylist={true}
+             autoPlayNextTrack={true}
+             customColorScheme={colors}/>
             </div>
                           )
               }
