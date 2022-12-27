@@ -63,7 +63,7 @@ const Portfolio = () => {
   return (
     <Wrapper>
     <section id="portfolio">
-      <h5>Skills importantes</h5>
+      <h5>Live Demo Modals</h5>
       <h2>Portfolio</h2>
 
       
@@ -116,7 +116,7 @@ const Portfolio = () => {
         }
 
          {isVisible &&  (
-        <div className="container portfolio__detail absolute rounded-2xl  w-75% h-5/6 bg-white p-4 text-black ">
+        <div className="container portfolio__detail absolute rounded-2xl  w-75% bg-white p-4 text-black ">
           
               <button  onClick={toggleVisibility} className='float-right m-auto mr-2 mt-1'  >Cerrar</button>
             <h1 className='text-center mt-16'>¿ Que es un Hook de Reactjs?</h1>
@@ -138,7 +138,7 @@ const Portfolio = () => {
                           )
               }
               {isVisible2 &&  (
-        <div className="container portfolio__detail absolute rounded-2xl md:h-max w-75% h-5/6 bg-white p-4 text-black ">
+        <div className="container portfolio__detail absolute rounded-2xl md:h-max w-75% bg-white p-4 text-black ">
           
               <button  onClick={toggleVisibility2} className='float-right m-auto mr-2 mt-1'  >Cerrar</button>
             <h1 className='text-center mt-16'>useEffect</h1>

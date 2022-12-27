@@ -2,7 +2,7 @@ import React from 'react'
 import './about.css'
 import {FaAward} from 'react-icons/fa'
 import {IoLibraryOutline} from 'react-icons/io5'
-import {MdContacts} from 'react-icons/md'
+
 import ME from '../../assets/Me.png'
 
 const About = () => {
@@ -30,8 +30,8 @@ const About = () => {
                   <IoLibraryOutline className='about__icon'/>
                   <h5>Skills</h5>
                   
-                  <small> <li>Frontend</li></small>
-                  <small> <li> Backend</li></small>
+                  <small> <li>Front End</li></small>
+                  <small> <li> Back End</li></small>
                   
                   
                   </article>
@@ -39,13 +39,16 @@ const About = () => {
                   <article className='about__card'>
                   <FaAward className='about__icon'/>
                   <h5>Proyectos</h5>
-                  <small>Bidder</small>
+                  <small><li>Live Demo Modals</li>
+                    </small>
+                  <small>
+                    <li>Urbano Store</li>
+                    </small>
                   </article>
 
             </div>
-            <p>Hola, soy Maikol Zapata, un desarrollador web capaz de crear desde 0 tanto en backend como en frontend. En estos años me he dedicado a la programación (Full Stack Developer) pasando por diferentes lenguajes, metodologías,  tipos de diseños web como también el manejo de base de datos de Usuarios en las aplicaciones.</p>
-      <a href="#contact" className='btn btn-primary'>Contáctame <MdContacts
-/></a>
+            <p>Hola, soy Maikol Zapata, desarrollador Front End capaz de crear contenido según requerimientos solicitados diseñando modelos acordes a las tecnologias de vanguardia actuales.</p>
+      <a href="#contact" className='btn btn-primary mx-auto'>Contáctame </a>
       </div>
     </div>
     </section>

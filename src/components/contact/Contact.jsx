@@ -48,16 +48,16 @@ const Contact = () => {
         <article className="contact__option">
           <BsWhatsapp/>
         <h4>Whatsapp</h4>
-        <h5>+ 569 65514796</h5>
+        <h5>+ 569 81514796</h5>
         <a href="https://api.whatsapp.com/send?phone=56981514796">Envia un mensaje</a>
 
         </article>
       </div>
         <form ref={form} onSubmit={sendEmail} >
-            <input type="text" name='name' placeholder='Tu nombre completo' required/>
+            <input type="text"  name='name' placeholder='Tu nombre completo' required/>
             <input type="text" name='email' placeholder='Tu email' required/>
             <textarea name="message" rows='7' placeholder='Tu mensaje' required></textarea>
-            <button type='submit' className='btn btn-primary'> Enviar mensaje</button>
+            <button type='submit' className='btn btn-primary mx-auto'> Enviar mensaje</button>
         </form>
 
 
